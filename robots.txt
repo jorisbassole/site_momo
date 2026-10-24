@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.morganelebastard-sexologue.fr/sitemap.xml

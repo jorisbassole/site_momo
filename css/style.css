@@ -1,0 +1,146 @@
+/* Morgane Le Bastard – Sexologue à Paris */
+:root{
+  --creme:#FFF5E6; --peche:#FDECDD; --encre:#231F20; --texte:#4A4244; --doux:#5E5557;
+  --ocre:#966311; --ocre-fonce:#7A4F0C; --ligne:#231F2033; --radius:16px;
+  --max:1200px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+[id]{scroll-margin-top:88px}
+body{margin:0;font-family:"Work Sans",system-ui,sans-serif;font-size:17px;line-height:1.6;color:var(--encre);background:var(--creme);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:var(--ocre-fonce)} a:hover{color:var(--encre)}
+h1,h2,h3{margin:0;font-weight:500;line-height:1.15}
+p{margin:0}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+.section{padding:96px 0}
+.bg-peche{background:var(--peche)}
+.eyebrow{font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:var(--ocre-fonce);font-weight:600}
+.h2{font-size:clamp(30px,4vw,40px)}
+.center{text-align:center}
+.lead{font-size:19px;color:var(--texte)}
+.muted{color:var(--texte)}
+.stack{display:flex;flex-direction:column;gap:20px}
+.head-center{max-width:720px;margin:0 auto 48px;text-align:center;display:flex;flex-direction:column;gap:12px}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:16px;top:16px;z-index:99;background:#fff;padding:8px 12px;border-radius:8px}
+
+/* Boutons */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:14px 26px;border-radius:8px;font:inherit;font-weight:500;text-decoration:none;border:0;cursor:pointer;transition:background .2s}
+.btn-primary{background:var(--ocre);color:#fff}
+.btn-primary:hover{background:var(--ocre-fonce);color:#fff}
+.btn-secondary{background:#231F201A;color:var(--encre)}
+.btn-secondary:hover{background:#231F2026;color:var(--encre)}
+.btn-sm{min-height:44px;padding:10px 20px;font-size:15px}
+
+/* En-tête */
+.site-header{position:sticky;top:0;z-index:50;background:var(--creme);border-bottom:1px solid #231F201A}
+.nav{display:flex;align-items:center;gap:24px;padding-top:14px;padding-bottom:14px}
+.brand{display:flex;flex-direction:column;line-height:1.2;text-decoration:none;color:var(--encre);margin-right:auto}
+.brand strong{font-weight:600;font-size:18px}
+.brand span{font-size:13px;color:var(--doux)}
+.nav-links{display:flex;gap:24px;list-style:none;margin:0;padding:0;font-size:15px}
+.nav-links a{color:var(--encre);text-decoration:none}
+.nav-links a:hover{color:var(--ocre-fonce)}
+.burger{display:none;background:none;border:0;padding:10px;min-width:44px;min-height:44px;color:var(--encre);cursor:pointer}
+@media (max-width:980px){
+  .burger{display:inline-flex;align-items:center;justify-content:center}
+  .nav-links{display:none;position:absolute;left:16px;right:16px;top:100%;flex-direction:column;gap:0;background:var(--creme);border-radius:var(--radius);box-shadow:0 8px 24px #231F2026;padding:8px}
+  .nav-links.is-open{display:flex}
+  .nav-links a{display:block;padding:12px 16px;font-size:17px}
+  .nav .btn-sm{display:none}
+}
+
+/* Hero */
+.hero{padding:72px 0 64px}
+.grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:56px;align-items:center}
+.hero h1{font-size:clamp(36px,5vw,54px);line-height:1.08;letter-spacing:-.02em}
+.hero .stack{gap:24px}
+.actions{display:flex;flex-wrap:wrap;gap:12px}
+.checks{list-style:none;margin:8px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px 20px;font-size:15px;color:var(--texte)}
+.checks li{display:flex;gap:8px;align-items:center}
+.checks svg{flex:none}
+.checks a{color:inherit}
+.hero-photos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.hero-photos img{width:100%;object-fit:cover;border-radius:var(--radius)}
+.hero-photos img:nth-child(1){height:260px}
+.hero-photos img:nth-child(2){height:340px;margin-top:40px}
+.hero-photos img:nth-child(3){height:300px;margin-top:-40px}
+.hero-photos img:nth-child(4){height:260px}
+@media (max-width:600px){.hero-photos img:nth-child(n){height:180px;margin-top:0}}
+
+/* Présentation */
+.photo-tall{width:100%;height:520px;object-fit:cover;border-radius:var(--radius)}
+@media (max-width:600px){.photo-tall{height:320px}}
+.diplomes{list-style:none;margin:8px 0 0;padding:0;display:grid;gap:12px}
+.diplomes li{background:var(--creme);border-radius:12px;padding:14px 18px}
+.diplomes strong{font-weight:600}
+.diplomes span{display:block;font-size:15px;color:var(--doux)}
+.annuaire{display:flex;gap:16px;align-items:center;background:var(--encre);color:var(--creme);border-radius:var(--radius);padding:20px 22px;text-decoration:none}
+.annuaire:hover{color:var(--creme);background:#3a3335}
+.annuaire .ico{flex:none;width:44px;height:44px;border-radius:50%;background:var(--ocre);display:flex;align-items:center;justify-content:center}
+.annuaire strong{display:block;font-weight:600}
+.annuaire small{font-size:14px;color:#E8DCCF}
+.parcours summary{cursor:pointer;font-weight:500;color:var(--ocre-fonce)}
+.parcours p{margin-top:12px;color:var(--texte);font-size:16px}
+
+/* Cartes */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:24px}
+.card{background:var(--peche);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column}
+.card img{width:100%;height:220px;object-fit:cover}
+.card-body{padding:24px;display:flex;flex-direction:column;gap:10px}
+.card h3{font-size:22px;font-weight:600}
+.card p{color:var(--texte);font-size:16px}
+
+/* Motifs */
+.motifs{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:20px;list-style:none;margin:0;padding:0}
+.motifs li{background:var(--creme);border-radius:var(--radius);padding:28px;display:flex;flex-direction:column;gap:8px}
+.motifs .num{font-size:14px;font-weight:600;color:var(--ocre-fonce)}
+.motifs h3{font-size:21px;font-weight:600}
+.motifs p{font-size:16px;color:var(--texte)}
+.note{margin:32px auto 0;max-width:640px;text-align:center;color:var(--texte)}
+
+/* Déroulé */
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:32px}
+.steps li{display:flex;flex-direction:column;gap:10px;border-top:2px solid var(--ocre);padding-top:20px}
+.steps span{font-weight:600;color:var(--ocre-fonce)}
+.steps h3{font-size:21px;font-weight:600}
+.steps p{font-size:16px;color:var(--texte)}
+
+/* Tarifs */
+.prices{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:24px;max-width:820px;margin:0 auto}
+.price{background:var(--creme);border-radius:var(--radius);padding:32px;display:flex;flex-direction:column;gap:12px}
+.price .t{font-weight:600;font-size:20px}
+.price .d{color:var(--doux);font-size:15px}
+.price .p{margin:8px 0;font-size:48px;font-weight:500;line-height:1}
+
+/* FAQ */
+.faq{max-width:820px}
+.faq-list{display:flex;flex-direction:column;gap:12px}
+.faq details{background:var(--peche);border-radius:12px;padding:18px 22px}
+.faq summary{font-weight:600;cursor:pointer}
+.faq details p{margin-top:10px;color:var(--texte);font-size:16px}
+
+/* Contact */
+.contact-info address{font-style:normal;color:var(--texte)}
+.form{background:var(--creme);border-radius:var(--radius);padding:32px;display:flex;flex-direction:column;gap:6px}
+.form label{font-size:14px;font-weight:600;margin-top:10px}
+.form input,.form textarea{font:inherit;padding:12px 14px;border:1px solid var(--ligne);border-radius:8px;background:#fff;color:var(--encre)}
+.form input:focus,.form textarea:focus{outline:2px solid var(--ocre);outline-offset:1px}
+.form .btn{margin-top:16px}
+.hp{position:absolute;left:-9999px}
+.form-msg{display:none;padding:14px 16px;border-radius:8px;font-size:15px}
+.form-msg.ok{background:#E7F2E4;color:#1F4A1A}
+.form-msg.err{background:#FBE3DF;color:#7A1F12}
+.form-msg.is-shown{display:block}
+
+/* Pied de page */
+.footer{padding:48px 0;font-size:15px;color:var(--doux)}
+.footer .wrap{display:flex;flex-wrap:wrap;gap:16px 32px;justify-content:space-between;align-items:center}
+.footer nav{display:flex;flex-wrap:wrap;gap:20px}
+
+/* Apparition au scroll */
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}
+.reveal.is-visible{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}}
+:focus-visible{outline:2px solid var(--ocre);outline-offset:2px}

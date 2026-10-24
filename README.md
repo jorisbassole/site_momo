@@ -16,7 +16,7 @@ Les dossiers `_transfer/`, `_source/` et `_ancienne-version/` sont exclus du dé
 ## Formulaire de contact
 Le formulaire envoie les messages à morganeccfsexo@gmail.com via FormSubmit (gratuit, sans compte).
 Activation : au tout premier envoi, FormSubmit envoie un e-mail « Activate Form » à cette adresse → cliquer sur le lien.
-Ensuite (recommandé) : FormSubmit fournit un identifiant aléatoire ; remplace l'adresse e-mail dans l'attribut
+Fait : l'adresse est remplacée par l'alias 9e0a94e5defee38cfc3578923b3847af dans `index.html`.
 `action` du formulaire par cet identifiant pour ne plus exposer l'adresse dans le code.
 
 ## Tester en local
